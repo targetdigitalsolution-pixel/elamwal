@@ -1,0 +1,103 @@
+/* @import "./assets/fonts/cairo.css"; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @font-face {
+  font-family: "Cairo";
+  src: url("./assets/fonts/Cairo/cairo-v30-arabic_latin-regular.woff2")
+      format("woff2"),
+    url("./assets/fonts/Cairo/cairo-v30-arabic_latin-regular.woff")
+      format("woff");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+} */
+
+body {
+  margin: 0;
+  font-family: "Tajawal", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: auto;
+}
+@layer base {
+  :root {
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+  }
+
+  /* * {
+    font-family: 'Cairo', sans-serif;
+  } */
+
+  html {
+    direction: rtl;
+  }
+
+  /* body {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+  } */
+
+  @media (min-width: 640px) {
+    .container {
+      padding: 0 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding: 0 4rem;
+    }
+  }
+}
+
+/* Swiper Custom Styles */
+.stories-swiper .swiper-pagination-bullet,
+.opinion-swiper .swiper-pagination-bullet,
+.hero-swiper .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.stories-swiper .swiper-pagination-bullet-active,
+.opinion-swiper .swiper-pagination-bullet-active,
+.hero-swiper .swiper-pagination-bullet-active {
+  background: #00a651;
+}
+
+.stories-swiper .swiper-pagination,
+.opinion-swiper .swiper-pagination,
+.hero-swiper .swiper-pagination {
+  position: static !important;
+  margin-top: 1.5rem;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease forwards;
+}
