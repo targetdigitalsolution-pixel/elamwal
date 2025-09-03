@@ -11,6 +11,7 @@ import OnTrend_1 from "../../../assets/images/OnTrend_1.webp";
 import OnTrend_2 from "../../../assets/images/OnTrend_2.webp";
 import OnTrend_3 from "../../../assets/images/OnTrend_3.webp";
 import OnTrend_4 from "../../../assets/images/OnTrend_4.webp";
+import { ClockIcon } from "@heroicons/react/24/outline";
 
 export const NewsSlider = () => {
   const sliderArticles = [
@@ -182,6 +183,7 @@ export const NewsSlider = () => {
                   </h3>
                   
                   <div className="flex items-center gap-2">
+                    <ClockIcon className="w-3 h-3 text-gray-500" />
                     <span className="text-xs text-gray-400">
                       {article.timeAgo}
                     </span>
