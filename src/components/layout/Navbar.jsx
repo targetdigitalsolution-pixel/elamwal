@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "../ui/button";
 import { Dropdown } from "../ui/dropdown";
 import { Search } from "../ui/search";
@@ -15,6 +16,7 @@ import sun from "../../assets/icons/Sun cloud angled rain.svg";
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const location = useLocation();
 
   useEffect(() => {
     let ticking = false;
@@ -55,6 +57,7 @@ export const Navbar = () => {
     {
       label: "بنوك",
       active: false,
+      href: "/banks",
       dropdownItems: [
         {
           label: "بنوك وتأمين",
@@ -226,7 +229,19 @@ export const Navbar = () => {
             {/* Right side  */}
             <div className="items-center hidden gap-3 lg:inline-flex xl:gap-5 ">
               {navigationItems.map((item, index) =>
-                item.dropdownItems ? (
+                item.href ? (
+                  <Link
+                    key={index}
+                    to={item.href}
+                    className={`inline-flex h-14 xl:h-16 items-center justify-center gap-2 px-0 py-2 cursor-pointer hover:bg-gray-100 transition-colors ${
+                      location.pathname === item.href ? "border-b-[5px] border-primary" : ""
+                    }`}
+                  >
+                    <div className="text-sm font-medium text-gray-600 md:text-base">
+                      {item.label}
+                    </div>
+                  </Link>
+                ) : item.dropdownItems ? (
                   <Dropdown
                     key={index}
                     trigger={
@@ -320,7 +335,19 @@ export const Navbar = () => {
             {/* Right side  */}
             <div className="items-center hidden gap-3 lg:inline-flex xl:gap-5 ">
               {navigationItems.map((item, index) =>
-                item.dropdownItems ? (
+                item.href ? (
+                  <Link
+                    key={index}
+                    to={item.href}
+                    className={`inline-flex h-14 xl:h-16 items-center justify-center gap-2 px-0 py-2 cursor-pointer hover:bg-gray-100 transition-colors ${
+                      location.pathname === item.href ? "border-b-[5px] border-primary" : ""
+                    }`}
+                  >
+                    <div className="text-sm font-medium text-gray-600 md:text-base">
+                      {item.label}
+                    </div>
+                  </Link>
+                ) : item.dropdownItems ? (
                   <Dropdown
                     key={index}
                     trigger={
