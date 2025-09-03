@@ -3,8 +3,11 @@ import { Header } from "../../components/layout/Header";
 import { UserProfile } from "../../components/layout/UserProfile";
 import { Navbar } from "../../components/layout/Navbar";
 import { Footer } from "../../components/sections/Footer";
-import { BanksHeroSection } from "./sections/BanksHeroSection";
+import { BanksTags } from "./sections/BanksTags";
+import { BanksSlider } from "./sections/BanksSlider";
 import { BanksMainContent } from "./sections/BanksMainContent";
+import { MostReadSection } from "./sections/MostReadSection";
+import Sidebar from "../../components/sections/Sidebar";
 
 export const Banks = () => {
   return (
@@ -15,8 +18,23 @@ export const Banks = () => {
         <Navbar />
         
         <div className="container pt-6">
-          <BanksHeroSection />
-          <BanksMainContent />
+          {/* Tags Section */}
+          <BanksTags />
+          
+          {/* Main Layout: 2/3 and 1/3 */}
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Main Content - 2/3 */}
+            <main className="flex-1 lg:w-2/3">
+              <BanksSlider />
+              <BanksMainContent />
+            </main>
+            
+            {/* Sidebar - 1/3 */}
+            <aside className="w-full lg:w-1/3 space-y-8">
+              <MostReadSection />
+              <Sidebar />
+            </aside>
+          </div>
         </div>
         
         <Footer />
