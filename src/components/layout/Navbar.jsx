@@ -39,6 +39,7 @@ export const Navbar = () => {
     {
       label: "أخبار",
       active: true,
+      href: "/news",
       dropdownItems: [
         { label: "عاجل", value: "local-news", href: "#" },
         { label: "الرياضة", value: "world-news", href: "#" },
