@@ -26,7 +26,9 @@ export const News = () => {
             {/* Main Content - 2/3 */}
             <main className="flex-1 lg:w-2/3">
               <NewsSlider />
-              <NewsMainContent />
+              <div className="bg-white rounded-lg p-6 mt-6">
+                <NewsMainContent />
+              </div>
             </main>
             
             {/* Sidebar - 1/3 */}

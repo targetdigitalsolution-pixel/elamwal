@@ -33,12 +33,6 @@ export const NewsSlider = () => {
       title: "نمو الاقتصاد المصري يحقق أرقاماً قياسية في الربع الأول من 2025",
       backgroundImage: OnTrend_2,
     },
-    {
-      id: 4,
-      category: "أخبار عالمية",
-      title: "قمة عربية طارئة لمناقشة التطورات الإقليمية والدولية الراهنة",
-      backgroundImage: OnTrend_3,
-    },
   ];
 
   const sideArticles = [
