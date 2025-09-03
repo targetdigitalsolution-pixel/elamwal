@@ -48,3 +48,5 @@ const Banks = () => {
 };
 
 export default Banks;
+
+export { Banks }
