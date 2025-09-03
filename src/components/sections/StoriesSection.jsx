@@ -129,7 +129,6 @@ export const StoriesSection = () => {
                 setTimeout(() => {
                   swiper.params.navigation.prevEl = prevRef.current;
                   swiper.params.navigation.nextEl = nextRef.current;
-                  swiper.navigation.destroy();
                   swiper.navigation.init();
                   swiper.navigation.update();
                 }, 0);
