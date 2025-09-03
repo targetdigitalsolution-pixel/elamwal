@@ -215,7 +215,9 @@ export const Navbar = () => {
                   <Bars3BottomRightIcon className="text-black h-7 w-7" />
                 </div>
               </button>
-              <img className="w-20 lg:hidden" alt="Frame" src={logo} />
+              <a href="/">
+                <img className="w-20 lg:hidden" alt="Frame" src={logo} />
+              </a>
             </div>
             <div className="flex items-center justify-center gap-1 lg:hidden ">
               <img
@@ -321,6 +323,8 @@ export const Navbar = () => {
                   <Bars3BottomRightIcon className="text-black h-7 w-7" />
                 </div>
               </button>
+              <a href="/">
+              </a>
               <img className="w-20 lg:hidden" alt="Frame" src={logo} />
             </div>
             <div className="flex items-center justify-center gap-1 lg:hidden ">
